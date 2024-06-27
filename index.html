@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Sets the character encoding for the HTML document -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Ensures compatibility with Internet Explorer's edge mode -->
+    <meta name="viewport" content="width=device-width, initial scale=1.0"> <!-- Sets the viewport to make the website responsive on different devices -->
+    <link rel="stylesheet" href="style.css"> <!-- Links the external CSS stylesheet -->
+    <title>Expense Tracker App</title> <!-- Sets the title of the webpage -->
+</head>
+<body>  
+    <h1>
+        Expense Tracker App <!-- Main heading of the webpage -->
+    </h1>
+    <div class="input-section">
+        <!-- Input section for adding new expenses -->
+        <label for="category-select">Category:</label> <!-- Label for the category select dropdown -->
+        <select id="category-select"> <!-- Dropdown for selecting expense category -->
+            <option value="Food & Beverage">Food & Beverage</option>
+            <option value="rent">Rent</option>
+            <option value="Transportation">Transportation</option>
+            <option value="Entertainment">Entertainment</option>
+        </select>
+        <label for="amount-input">Amount:</label> <!-- Label for the amount input field -->
+        <input type="number" id="amount-input"> <!-- Input field for entering the amount -->
+        <label for="date-input">Date:</label> <!-- Label for the date input field -->
+        <input type="date" id="date-input"> <!-- Input field for entering the date -->
+        <button id="add-button">Add</button> <!-- Button to add the expense -->
+    </div>
+    <div class="expense-list">
+        <!-- Section to display the list of expenses -->
+        <h2> Expense List</h2> <!-- Heading for the expense list -->
+        <table>
+            <thead>
+                <!-- Table header row -->
+                <tr>
+                    <th>Category</th> <!-- Table header for category -->
+                    <th>Amount</th> <!-- Table header for amount -->
+                    <th>Date</th> <!-- Table header for date -->
+                    <th>Delete</th> <!-- Table header for delete action -->
+                </tr>
+            </thead>
+            <tbody id="expense-table-body">
+                <!-- Table body where expense items will be dynamically added -->
+            </tbody>
+            <tfoot>
+                <!-- Table footer for displaying total amount -->
+                <tr>
+                    <td>Total:</td> <!-- Cell for the total label -->
+                    <td id="total-amount"></td> <!-- Cell for displaying the total amount -->
+                    <td></td> <!-- Empty cell for spacing -->
+                    <td></td> <!-- Empty cell for spacing -->
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <script src="script.js"></script> <!-- Links the external JavaScript file -->
+</body>
+</html>
